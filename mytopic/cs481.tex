@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{ifthen,graphicx}
+\usepackage[top=0.6in, bottom=0.9in, left=0.8in, right=0.8in]{geometry}
+%\usepackage[top=1.0in, bottom=1.0in]{geometry}
+
+%\pagestyle{empty}
+\newboolean{KEY}
+%\setboolean{KEY}{true}   %prints questions and answers
+\setboolean{KEY}{false} %prints questions only
+\newcommand{\answer}[1]{\ifthenelse{\boolean{KEY}}{#1}{}}
+\newcommand{\titleheader}[2]{\ifthenelse{\boolean{KEY}}{#1}{#2}}
+
+\begin{document}
+\titleheader{\section*{CS481 SP2020 Seminar Topics}}{\section*{CS481 SP2020 Seminar Topics}}
+
+Dr. Feng's suggested seminar topics: \\
+
+\begin{enumerate}
+\item Topics I know more about 
+	\begin{enumerate} 
+	\item Computer Security: traditional security models and information flow properties   
+	\item Cyber Physical System: security challenges and potential way to prevent information leakage in Cyber Physical System such as smart grid 
+	\item Zero Knowledge Proof: security protocol design applying zero knowledge proof
+	\item Software Engineering: software quality metrics
+	\end{enumerate}
+
+
+\item Topics I'm interested in
+  \begin{enumerate}
+        \item Distributed System: classical problems such as Byzantine problem
+	\item Computer Architecture: Beyond Reduced Instruction Set Computer (RISC)
+  \end{enumerate}
+
+\item Topics I know a little bit about 
+	\begin{enumerate}
+  \item Data structure and algorithm design: comparison of different data structures in implementations of specific problems
+	\item Information Theory: Shannon Entropy related material (math knowledge/interest required)
+	\item NP-completeness problems and reducibility between them
+	\item Cryptography: Encryption and Decryption (math knowledge/interest required)
+	\item Database Design and Application Development
+	\item Apply Unified Modeling Language (UML) Model a System
+	\item Linux/Unix Operating System Related
+	\end{enumerate}
+
+\item Other potential application project using following programming languages:
+\begin{enumerate}
+\item C++
+\item Java
+\item Python
+\item Matlab
+\item PHP 
+\item Xampp
+\item Shell Scripting
+\item SQL
+\item SPIN Model Checker
+\end{enumerate}	
+\end{enumerate}
+\end{document}

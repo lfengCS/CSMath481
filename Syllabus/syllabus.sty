@@ -1,0 +1,339 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% page layout
+
+\usepackage{vmargin}
+\usepackage{tabularx}
+\setpapersize{USletter}
+\normalsize
+\setmargins{1.0in}{0.5in}{6.5in}{9.0in}
+{12pt}{0.25in}{12pt}{0.5in}
+
+%\setmarginsrb{1.0in}{0.5in}{1.0in}{0.25in}%
+%{12pt}{0.25in}{12pt}{0.5in}
+%\setmarginsrb{1.0in}{0.5in}{1.0in}{0.5in}%
+%{12pt}{0.25in}{12pt}{0.5in}
+
+% Define a new 'leo' style for the package that will use a smaller font.
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% p. 116 Latex Companion
+% horizontally center columns
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{EnumerateNoItemSep}
+\newenvironment{EnumerateNoItemSep}
+{\begin{list}{{}
+\arabic{EnumerateNoItemSep}.}{\usecounter{EnumerateNoItemSep}%
+\setlength{\itemsep}{0pt}%
+\setlength{\topsep}{0pt}%
+\setlength{\labelwidth}{0pt}%
+\setlength{\leftmargin}{3pt}%
+\setlength{\parsep}{0pt}}}%
+{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{EnumerateWeekSchedule}
+\newenvironment{EnumerateWeekSchedule}
+{\begin{list}{{Week}
+\arabic{EnumerateWeekSchedule}.}{\usecounter{EnumerateWeekSchedule}%
+\setlength{\itemsep}{0pt}%
+\setlength{\topsep}{0pt}%
+\setlength{\labelwidth}{0pt}%
+\setlength{\leftmargin}{3pt}%
+\setlength{\parsep}{0pt}}}%
+{\end{list}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\bold}[1]{%
+\begin{bfseries}#1\end{bfseries}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newcommand{\SyllabusHeader}[2]{%
+\Large%
+\center%
+\bold{Capital University - #1\\#2}
+\flushleft%
+\normalsize%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusTimeRoomOfficeHours}[3]{%
+\begin{tabular}{@{}llll}
+Instructor: & Li Feng, Ph.D. (email: lfeng@capital.edu) & Time/Day: & #1\\
+Office: & BHSN 117A, 614-236-6605, 409-692-9218 (mobile)  & Room: & #2\\
+Office Hours: & \multicolumn{3}{l}{#3}
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusCatalogDescription}[1]{%
+\flushleft%
+\bold{Catalog Description: }#1%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusPrerequisitesCredits}[2]{%
+\flushleft%
+\bold{Prerequisites:} #1\\
+\bold{Credits:} #2
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusText}[4]{%
+\flushleft
+\begin{tabular}{@{}ll}
+\bold{Text:} & {\em#1}\\
+& by #2, #3, #4
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusBeginGoals}{%
+\flushleft%
+\bold{Course Goals}\\
+\begin{EnumerateNoItemSep}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusEndGoals}{%
+\end{EnumerateNoItemSep}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusBeginOutcomes}{%
+\flushleft%
+\bold{Intended Learning Outcomes and Assessment Plan}%
+\begin{EnumerateNoItemSep}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusEndOutcomes}{%
+\end{EnumerateNoItemSep}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusReading}[1]{%
+\flushleft%
+\bold{Required Reading}\\
+{#1}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusEndReading}{%
+\end{EnumerateNoItemSep}
+}
+
+\newcommand{\SyllabusAssignments}{%
+\flushleft
+\bold{Assignments and Examinations}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusAttendance}[2]{%
+\flushleft
+
+Attendance and active participation in class are required. There is no
+penalty for the first #1 absences; for every unexcused absence over
+the first #1, your class participation/attendance grade will be
+reduced by #2 percentage points. Being late for class, lack of
+attention, not taking notes, etc. may also reduce your grade. If you
+miss class, you are still responsible for all material that is covered
+and all announcements that are made. Make-up exams are normally only
+given if the absence is beyond the student's control. You must notify
+me in advance if you will miss an exam.  }
+
+\newcommand{\SyllabusSeminarAttendance}{%
+\flushleft
+
+Your attendance and participation grade will be determined using the following rules. Any days that you are up to 5 minutes late, 5 percentage points will be deducted from your semester attendance grade. If you are 10 or more minutes late, 10 percentage points will be deducted from your semester attendance grade unless you are granted an excused absence. Rude behavior such as talking during a presentation will also result in up to 10 percentage points per class session being deducted from your semester attendance grade. Asking appropriate questions also contributes to your attendance/participation grade. }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusWithdrawSeminar}[1]{%
+\flushleft
+The last day to withdraw is #1.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusGradingScale}{%
+\flushleft%
+\bold{Tentative Grading Scale}\\
+\vspace{0.1in}
+\begin{tabular}{@{}llllll}
+Percentage & Letter Grade & Percentage & Letter Grade & Percentage &
+Letter Grade\\
+93-100 & A & 80-82 & B- & 67-69 & D+ \\
+90-92 & A- & 77-79 & C+ & 60-66 & D \\
+87-89 & B+ & 73-76 & C & 0-59 & F \\
+83-86 & B & 70-72 & C-
+\end{tabular}
+}
+
+\newcommand{\SyllabusPolicies}{%
+\flushleft%
+\bold{Policies}%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusPhone}{%
+\flushleft
+
+Laptops and cell phones are to be turned off or put on vibrate and put away during the class. Studies have shown that short distractions diminish your ability to comprehend material and they also distract the students sitting near you. Use of a cell phone or other similar electronic devices during class will result in deductions in your Attendance/Participation grade.
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusLate}{%
+\flushleft
+
+Late assignments will not be accepted unless permission to turn
+it in late was granted by the instructor prior to the due
+date. Depending on the circumstances, a late penalty may be applied.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusSeminarIntegrity}{%
+\flushleft
+
+Academic Integrity: All assignments are to be your own work unless explicitly indicated otherwise.
+For programming assignments you may get help from the instructor or tutors. Any help you receive must be documented and submitted with the assignment. Violators will receive a zero for the assignment and the dean will be notified. Please review the Academic Integrity Policy in the Capital University student handbook.
+
+\flushleft
+
+University policies governing drop dates, penalties, plagiarism, and academic integrity, as detailed in the university bulletin, student handbook(s), and/or undergraduate time schedule, will be observed.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusIntegrity}{%
+\flushleft
+
+Academic Integrity: All assignments are to be your own work unless explicitly indicated otherwise.
+Please review the Academic Integrity Policy in the Capital University student handbook.
+
+\flushleft
+
+University policies governing drop dates, penalties, plagiarism, and
+academic integrity, as detailed in the university bulletin, student
+handbook(s), and/or undergraduate time schedule, will be observed.
+\url{http://bulletin.capital.edu/content.php?catoid=8&navoid=195}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusSchedule}[1]{%
+\flushleft
+\bold{Tentative course calendar}\\
+The last day to withdraw or choose the pass/fail option is #1.\\
+\vspace{0.2in}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusLabSubmit}{%
+
+\flushleft
+
+for each file you need to submit.
+
+\flushleft
+
+Labs are to be commented. Lack of, or inadequate comments and/or
+failure to follow the style guidelines will result in a 10-20\%
+penalty on the lab.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SyllabusWebPage}[0]{%
+\flushleft
+
+Assignments will be given in paper or posted on iLearn: 
+\url{https://ilearn.capital.edu/}
+}
+
+\newcommand{\SyllabusAcademicSuccess}[0]{%
+\flushleft
+The office of Academic Success (Blackmore Library, 2nd floor) assists all students in becoming more confident, independent lifelong learners.  Provided services include the following:
+\begin{itemize}
+\item
+Content area Peer Tutoring for math, science, and most other subjects.
+\item
+A Writing Center that serves as a resource for students engaged in any stage of the writing process for assignments in any course.
+\item
+Supplemental Instruction (SI) in support of selected courses.
+\item
+Academic Success Coaching to assist students with developing strategies for time management, organization, test preparation and test-taking strategies, goal setting, registration system navigation, reading degree audits, course sequencing, and more.
+\item
+Online eTutoring (www.etutoring.org) for accounting, algebra, anatomy \& physiology, calculus, chemistry, math, physics, statistics, and writing.
+\item
+Testing services to assist the Office of Disability Services in implementing testing accommodations for registered students.
+\end{itemize}
+Students can schedule an appointment ahead of time by calling Academic Success at (614) 236-6327, emailing AcademicSuccess@capital.edu, or stopping by our learning center on the second floor of Blackmore Library.  Appointments can also be scheduled by logging into tutortrac.capital.edu.  For additional information about Academic Success programs and services, contact Director Bruce Epps at bepps@capital.edu or (614) 236-6461.  You can also follow us on Twitter and Instagram @CapitalUSuccess for updates and information.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SyllabusDisability}[0]{%
+\flushleft
+Capital University is committed to providing reasonable accommodations for students with disabilities. If you are seeking academic accommodations you are required to register with the Office of Disability Services (ODS). To receive academic accommodations for this class, please register with ODS and meet with me at the beginning of the semester. Further information may be obtained by contacting Dr. Jennifer Speakman, Assistant Provost and Disability Services Director, by email (jspeakman@capital.edu) or by telephone (614.236.7127).  This syllabus is available in alternate format upon request.
+}
+
+\newcommand{\SyllabusTitleIX}[0]{%
+\flushleft
+Capital University is committed to ensuring a safe environment free of discrimination on the basis of sex, including sexual misconduct and harassment.  If you have experienced an incident of sex or gender-based discrimination, harassment, or sexual misconduct, we encourage you to report it.  Capital University faculty are committed to supporting students, however, please understand that faculty are ``responsible employees'' of the University and must report incidents of sex- or gender-based discrimination, harassment, and sexual misconduct to the Title IX Coordinator, Dr. Jennifer Speakman.  If you would like to make a confidential report, please refer to Capital University's Sex- or Gender-Based Discrimination, Harassment, and Sexual Misconduct policy for more information on reporting options: http://www.capital.edu/Title-IX-and-Sexual-Harassment/. 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\FL}[0]{%
+\flushleft%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Example use:
+% previous text.\par
+% \needspace{5\baselineskip} % need next 5 lines on a single page/column
+% The next five lines ...
+%
+
+\newcommand{\needspace}[1]{%
+  \vskip \z@ \@plus #1\pagebreak[3]\vskip \z@ \@plus -#1\relax}
+
+\newcommand{\needspacelines}[1]{%
+  \vskip \z@ \@plus #1\baselineskip\pagebreak[3]\vskip \z@ \@plus%
+	 -#1\baselineskip\relax}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
